@@ -32,7 +32,7 @@ const getBook = async (req, res, next) => {
 
 // Obtener todos los libros [GET ALL]
 router.get("/", async (req, res) => {
-  res.header("Acces-Control-Allow-Origin", "/books");
+  res.header("Access-Control-Allow-Origin", "*");
 
   try {
     const books = await Book.find();
